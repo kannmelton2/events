@@ -132,3 +132,21 @@ const pieBuilder = (divName, arr) => {
 
 pieBuilder('pieCards', pies);
 
+// FILTERING / CLICK EVENT / ADD EVENT LISTENER
+
+const findMyPies = (e) => { // e = event (a js freebie... look it up)
+    const buttonId = e.target.id;
+    const myPies = [];
+    for (let i = 0; i < pies.length; i++) {
+        if (pies[i].instructor === buttonId) {
+            myPies.push(pies[i]);
+     }
+    }
+    pieBuilder('pieCards', myPies);
+};
+
+
+document.getElementById('Zoe').addEventListener('click', findMyPies);
+document.getElementById('Mary').addEventListener('click', findMyPies);
+document.getElementById('Luke').addEventListener('click', findMyPies);
+document.getElementById('Kayla').addEventListener('click', findMyPies);
