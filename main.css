@@ -6,6 +6,33 @@ body {
     text-align: center;
 }
 
+/* BUTTONS */
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn {
+display: inline-block;
+text-align: center;
+font-weight: bold;
+text-decoration: none;
+margin: 10px 5px 5px 5px;
+border: solid 1px transparent;
+border-radius: 0.75em;
+padding: .5em 5em;
+color: #ffffff;
+background-color: #9555af;
+}
+
+.btn:hover {
+border: solid 2px #808080;
+}
+
 /* CARDS CONTAINER */
 #pieCards {
     display: flex;

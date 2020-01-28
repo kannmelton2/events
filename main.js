@@ -126,9 +126,35 @@ const pieBuilder = (divName, arr) => {
     printToDom(divName, domStr);
 };
 
-// 3 cards to a row
-// nice big images
-// how do you rep other info?
+// FILTERING / CLICK EVENT / ADD EVENT LISTENER
 
-pieBuilder('pieCards', pies);
+const findMyPies = (e) => { // e = event (a js freebie... look it up)
+    const buttonId = e.target.id;
+    if (buttonId === 'All') {
+        pieBuilder('pieCards', pies);
+    } else {
+        const myPies = [];
+        for (let i = 0; i < pies.length; i++) {
+            if (pies[i].instructor === buttonId) {
+                myPies.push(pies[i]);
+         }
+        }
+        pieBuilder('pieCards', myPies);
+    }
+};
 
+const events = () => {
+document.getElementById('Zoe').addEventListener('click', findMyPies);
+document.getElementById('Mary').addEventListener('click', findMyPies);
+document.getElementById('Luke').addEventListener('click', findMyPies);
+document.getElementById('Kayla').addEventListener('click', findMyPies);
+document.getElementById('All').addEventListener('click', findMyPies);
+};
+
+// INITIALIZED ON PAGE LOAD
+const init = () => {
+    pieBuilder('pieCards', pies);
+    events();
+}
+
+init();
