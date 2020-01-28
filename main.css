@@ -1,3 +1,49 @@
 body {
     background-color: #B1EDE8;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* CARDS CONTAINER */
+#pieCards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    text-align: center;
+    width: 100%;
+}
+
+/* CARDS */
+.pie {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    width: 30%;
+    margin: 1.5%;
+    border: 1px solid black;
+    background-color: #F8F4E3;
+}
+
+/* CARD HEADER */
+.pie header, .pie h3, .pie p, .pie h6 {
+    width: 100%;
+    margin: .3em;
+    padding: 0 0 0 0;
+    text-align: center;
+}
+
+.pie h6 {
+    font-size: 1em;
+}
+
+/* CARD IMAGE */
+.pie img {
+    width: 95%;
+    margin: .5em;
+    padding: 0;
 }
